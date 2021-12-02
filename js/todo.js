@@ -46,7 +46,7 @@ var app = new Vue({
       var newIndex = this.todos.findIndex(function (item, key) {
         return todo.id === item.id;
       });
-      // 從索引序數的位置移除一項待辦事項
+      // 以待辦事項的 id 來取得想移除的待辦事項並刪除
       this.todos.splice(newIndex, 1);
     },
     // 指派指定的物件到 cacheTodo 內；指派指定的物件內的 title 項目到 cacheTitle 上
@@ -105,7 +105,7 @@ var app = new Vue({
     },
     // 宣告一個函數，用來統計未完成的項目
     unFinished: function () {
-      // 宣告一個變數 unTodos，並指派一個空陣列給它
+      // 宣告一個變數 unDos，並指派一個空陣列給它
       var unDos = [];
       // 取出 todos 陣列內的項目
       this.todos.forEach(function (item) {
